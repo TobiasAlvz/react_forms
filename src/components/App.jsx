@@ -4,11 +4,12 @@ function App () {
   const [inputName, setInputName] = useState ('');
   const [displayName, setDisplayName] = useState ('');
 
-  function handleChange (event) { 
+  function handleChange (event) {
     setInputName (event.target.value);
   }
 
   function handleSubmit () {
+    event.preventDefault ();
     setDisplayName (inputName);
   }
 
@@ -16,15 +17,15 @@ function App () {
     <div className="container">
 
       <h1>{displayName}</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          onChange={handleChange}
+          type="text"
+          placeholder="Qual seu nome?"
+        />
+        <button type="submit">Submit</button>
+      </form>
 
-      <input
-        onChange={handleChange}
-        type="text"
-        placeholder="Qual seu nome?"
-      
-      />
-
-      <button onClick={handleSubmit}>Submit</button>
     </div>
   );
 }
