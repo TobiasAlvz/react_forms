@@ -4,7 +4,7 @@ function App () {
   const [inputName, setInputName] = useState ('');
   const [displayName, setDisplayName] = useState ('');
 
-  function handleChange (event) {
+  function handleChange (event) { 
     setInputName (event.target.value);
   }
 
