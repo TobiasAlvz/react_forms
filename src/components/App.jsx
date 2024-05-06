@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 
 function App () {
   const [inputName, setInputName] = useState ('');
-
   const [displayName, setDisplayName] = useState ('');
 
   function handleChange (event) {
